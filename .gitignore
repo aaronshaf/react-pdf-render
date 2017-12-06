@@ -22,5 +22,4 @@ yarn-error.log*
 node_modules
 NOTES.md
 README.md
-*.pdf
 build
