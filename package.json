@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "pdfjs-dist": "^2.0.185",
+    "rbush": "^2.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"

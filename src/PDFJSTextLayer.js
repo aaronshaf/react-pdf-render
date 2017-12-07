@@ -91,7 +91,7 @@ export default class PDFJSTextLayer extends React.Component {
   render() {
     return (
       <div
-        className="TextLayer-container"
+        className="PDFJSTextLayer-container"
         style={{
           height: `${this.props.viewportHeight}px`,
           width: `${this.props.viewportWidth}px`,

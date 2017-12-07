@@ -69,13 +69,14 @@ export default class Page extends Component {
             border: '1px solid black'
           }}
         />
-        {this.state.textContent && (
-          <PDFJSTextLayer
-            pageNumber={1}
-            pageViewport={this.state.pageViewport}
-            textContent={this.state.textContent}
-          />
-        )}
+        {false &&
+          this.state.textContent && (
+            <PDFJSTextLayer
+              pageNumber={1}
+              pageViewport={this.state.pageViewport}
+              textContent={this.state.textContent}
+            />
+          )}
         {this.state.textContent && (
           <TextLayer
             pageViewport={this.state.pageViewport}

@@ -1,11 +1,8 @@
-// @flow
+// based on src/display/text_layer.js in PDF.js
+
+import './TextItem.css'
 import React, { Component } from 'react'
 import { concatenateMatrices } from './utils'
-
-type Props = {
-  pageViewport: Object,
-  textContent: Object
-}
 
 // reused to determine text size
 const canvas = document.createElement('canvas')
@@ -51,14 +48,20 @@ export default class TextItem extends Component<Props> {
     const style = {
       left: `${left}px`,
       top: `${top}px`,
-      fontSize: `${fontHeight}px`,
-      fontFamily: itemStyle.fontFamily,
       transform
+    }
+
+    const inlineBlockStyle = {
+      fontSize: `${fontHeight}px`,
+      fontFamily: itemStyle.fontFamily
+      // transform
     }
 
     return (
       <div className="TextItem" style={style}>
-        {item.str}
+        <div className="TextItem-inline-block" style={inlineBlockStyle}>
+          {item.str}
+        </div>
       </div>
     )
   }
