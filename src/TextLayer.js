@@ -1,5 +1,4 @@
-// @flow
-
+import './TextLayer.css'
 import React, { Component } from 'react'
 import TextItem from './TextItem'
 
@@ -21,11 +20,7 @@ class TextLayer extends Component<Props> {
         />
       )
     })
-    return (
-      <div className="Text layer">
-        {textDivs}
-      </div>
-    )
+    return <div className="TextLayer">{textDivs}</div>
   }
 }
 

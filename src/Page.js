@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TextLayer from './TextLayer'
+import PDFJSTextLayer from './PDFJSTextLayer'
 
 export default class Page extends Component {
   state = {
@@ -68,11 +69,19 @@ export default class Page extends Component {
             border: '1px solid black'
           }}
         />
-        {this.state.textContent &&
+        {this.state.textContent && (
+          <PDFJSTextLayer
+            pageNumber={1}
+            pageViewport={this.state.pageViewport}
+            textContent={this.state.textContent}
+          />
+        )}
+        {this.state.textContent && (
           <TextLayer
             pageViewport={this.state.pageViewport}
             textContent={this.state.textContent}
-          />}
+          />
+        )}
         {!this.state.textContent && 'uh oh'}
       </div>
     )

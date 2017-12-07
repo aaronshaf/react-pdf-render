@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Page from './Page'
-
-const PDFJS = window.PDFJS
+import PDFJS from 'pdfjs-dist'
 
 export default class PDFDocument extends Component {
   state = {
