@@ -57,12 +57,32 @@ export default class TextItem extends Component<Props> {
       // transform
     }
 
+    let partComponents = splitButKeepSeparator(item.str, 'his is').map(
+      (part, index) => {
+        if (part === 'his is') {
+          return (
+            <span className="underline-example" key={index}>
+              {part}
+            </span>
+          )
+        } else {
+          return <span key={index}>{part}</span>
+        }
+      }
+    )
+
     return (
       <div className="TextItem" style={style}>
         <div className="TextItem-inline-block" style={inlineBlockStyle}>
-          {item.str}
+          {partComponents}
         </div>
       </div>
     )
   }
+}
+
+function splitButKeepSeparator(string, separator) {
+  const parts = string.split(separator)
+  for (let i = parts.length; i-- > 1; ) parts.splice(i, 0, separator)
+  return parts
 }

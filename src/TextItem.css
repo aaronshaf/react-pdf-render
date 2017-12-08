@@ -9,5 +9,15 @@
   display: inline-block;
   vertical-align: top;
   /*color: transparent;*/
-  /*white-space: pre;*/
+  white-space: pre;
+}
+
+.TextItem-inline-block span:not(.underline-example) {
+  opacity: 0.2;
+}
+
+.underline-example {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  opacity: 1;
 }
